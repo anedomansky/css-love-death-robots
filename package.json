@@ -1,0 +1,15 @@
+{
+  "name": "css-love-death-robots",
+  "version": "1.0.0",
+  "description": "All Love, Death & Robots intro animations.",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch episode-1 -o episode-1"
+  },
+  "keywords": [],
+  "author": "Alexander Nedomansky <anedomansky@googlemail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-size: 1.25rem;
+  display: grid;
+  place-items: center; }
+
+body {
+  background-color: #f2f2f2; }
+
+main {
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly; }
+  main .item--1 {
+    position: relative;
+    width: 130px;
+    height: 130px; }
+    main .item--1::before, main .item--1::after {
+      position: absolute;
+      content: "";
+      left: 75px;
+      top: 5px;
+      width: 75px;
+      height: 120px;
+      background-color: #0d0d0d;
+      border-radius: 60px 60px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%; }
+    main .item--1::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%; }
+  main .item--2 {
+    position: relative;
+    width: 130px;
+    height: 130px; }
+    main .item--2::before, main .item--2::after {
+      position: absolute;
+      content: "";
+      left: 110px;
+      top: -16px;
+      width: 32px;
+      height: 142px;
+      background-color: #0d0d0d;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%; }
+    main .item--2::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+      border-radius: 60px; }
+  main .item--3 {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-color: #0d0d0d;
+    border-radius: 0 20px 20px 20px; }
+    main .item--3::before, main .item--3::after {
+      position: absolute;
+      content: "";
+      left: 15px;
+      top: 25px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #f2f2f2; }
+    main .item--3::after {
+      left: 80px; }

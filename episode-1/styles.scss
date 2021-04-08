@@ -1,0 +1,86 @@
+@import '../utilities/mixins';
+
+@include setup;
+
+body {
+    background-color: hsl(0, 0, 95);
+}
+
+main {
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .item--1 {
+        position: relative;
+        width: 130px;
+        height: 130px;
+
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            left: 75px;
+            top: 5px;
+            width: 75px;
+            height: 120px;
+            background-color: hsl(0, 0, 5);
+            border-radius: 60px 60px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        &::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+    }
+
+    .item--2 {
+        position: relative;
+        width: 130px;
+        height: 130px;
+
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            left: 110px;
+            top: -16px;
+            width: 32px;
+            height: 142px;
+            background-color: hsl(0, 0, 5);
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        &::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+            border-radius: 60px;
+        }
+    }
+
+    .item--3 {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        background-color: hsl(0, 0, 5);
+        border-radius: 0 20px 20px 20px;
+
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            left: 15px;
+            top: 25px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: hsl(0, 0, 95);
+        }
+
+        &::after {
+            left: 80px;
+        }
+    }
+}
