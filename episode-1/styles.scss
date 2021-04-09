@@ -4,6 +4,10 @@
 
 body {
     background-color: hsl(0, 0, 95);
+    animation-name: bg-change;
+    animation-duration: 0.1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
 
 main {
@@ -27,12 +31,22 @@ main {
             border-radius: 60px 60px 0 0;
             transform: rotate(-45deg);
             transform-origin: 0 100%;
+            animation-name: turn-heart-into-cross-left;
+            animation-duration: 0.5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
         }
 
         &::after {
             left: 0;
             transform: rotate(45deg);
             transform-origin: 100% 100%;
+            animation-name: turn-heart-into-cross-right;
+            animation-duration: 0.5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
         }
     }
 
@@ -77,10 +91,145 @@ main {
             height: 30px;
             border-radius: 50%;
             background-color: hsl(0, 0, 95);
+            animation-name: turn-square-into-cross-left;
+            animation-duration: 0.5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
         }
 
         &::after {
             left: 80px;
+            animation-name: turn-square-into-cross-right;
+            animation-duration: 0.5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
         }
+    }
+}
+
+@keyframes bg-change {
+    0% {
+        background-color: hsl(0, 0, 95);
+    }
+    100% {
+        background-color: hsl(0, 0, 5);
+    }
+}
+
+@keyframes turn-heart-into-cross-left {
+    0% {
+        left: 75px;
+        top: 5px;
+        width: 75px;
+        height: 120px;
+        background-color: hsl(0, 0, 5);
+        border-radius: 60px 60px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+    50% {
+        left: 110px;
+        top: -16px;
+        width: 8px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        border-radius: 0 0 0 0;
+    }
+    100% {
+        left: 110px;
+        top: -16px;
+        width: 32px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        border-radius: 0 0 0 0;
+    }
+}
+
+@keyframes turn-heart-into-cross-right {
+    0% {
+        left: 75px;
+        top: 5px;
+        width: 75px;
+        height: 120px;
+        background-color: hsl(0, 0, 5);
+        border-radius: 60px 60px 0 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+    50% {
+        top: -16px;
+        width: 8px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        left: 0;
+        border-radius: 0 0 0 0;
+    }
+    100% {
+        top: -16px;
+        width: 32px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        left: 0;
+        border-radius: 0 0 0 0;
+    }
+}
+
+
+@keyframes turn-square-into-cross-left {
+    0% {
+        left: 15px;
+        top: 25px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: hsl(0, 0, 95);
+    }
+    50% {
+        left: 110px;
+        top: -16px;
+        width: 8px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        border-radius: 0 0 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+    100% {
+        left: 110px;
+        top: -16px;
+        width: 32px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        border-radius: 0 0 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+}
+
+@keyframes turn-square-into-cross-right {
+    0% {
+        left: 80px;
+    }
+    50% {
+        top: -16px;
+        width: 8px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        left: 0;
+        border-radius: 0 0 0 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+    100% {
+        top: -16px;
+        width: 32px;
+        height: 142px;
+        background-color: hsl(0, 0, 95);
+        left: 0;
+        border-radius: 0 0 0 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
     }
 }
