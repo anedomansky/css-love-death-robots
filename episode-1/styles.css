@@ -55,7 +55,12 @@ main .item--1::after {
 main .item--2 {
   position: relative;
   width: 130px;
-  height: 130px; }
+  height: 130px;
+  animation-name: turn-into-skull;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; }
 
 main .item--2::before, main .item--2::after {
   position: absolute;
@@ -66,13 +71,23 @@ main .item--2::before, main .item--2::after {
   height: 142px;
   background-color: #0d0d0d;
   transform: rotate(-45deg);
-  transform-origin: 0 100%; }
+  transform-origin: 0 100%;
+  animation-name: turn-into-skull-before;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; }
 
 main .item--2::after {
   left: 0;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
-  border-radius: 60px; }
+  border-radius: 60px;
+  animation-name: turn-into-skull-after;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; }
 
 main .item--3 {
   position: relative;
@@ -208,3 +223,91 @@ main .item--3::after {
     border-radius: 0 0 0 0;
     transform: rotate(45deg);
     transform-origin: 100% 100%; } }
+
+@keyframes turn-into-skull {
+  0% {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-color: #f2f2f2; }
+  50% {
+    width: 30px;
+    height: 30px;
+    border: 32px solid red;
+    border-top: 40px solid transparent;
+    border-bottom: 22px solid red;
+    border-radius: 30px 30px 15px 15px;
+    box-shadow: 15px 45px 0 11px red; }
+  100% {
+    width: 30px;
+    height: 30px;
+    border: 32px solid red;
+    border-top: 40px solid transparent;
+    border-bottom: 22px solid red;
+    border-radius: 30px 30px 15px 15px;
+    box-shadow: 15px 45px 0 11px red; } }
+
+@keyframes turn-into-skull-before {
+  0% {
+    position: absolute;
+    content: "";
+    left: 110px;
+    top: -16px;
+    width: 32px;
+    height: 142px;
+    background-color: #0d0d0d;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%; }
+  50% {
+    position: absolute;
+    top: -60px;
+    left: -51px;
+    width: 0;
+    height: 0;
+    border: 66px solid red;
+    border-bottom: 66px solid transparent;
+    border-radius: 66px;
+    content: "";
+    transform: none;
+    background-color: red; }
+  100% {
+    position: absolute;
+    top: -60px;
+    left: -51px;
+    width: 0;
+    height: 0;
+    border: 66px solid red;
+    border-bottom: 66px solid transparent;
+    border-radius: 66px;
+    content: "";
+    transform: none;
+    background-color: red; } }
+
+@keyframes turn-into-skull-after {
+  0% {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    border-radius: 60px; }
+  50% {
+    transform: none;
+    position: absolute;
+    top: -13px;
+    left: -33px;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 61px 0 0 white, 4px -1px 0 9px red, -2px  4px 0 11px red, 58px -1px 0 9px red, 64px  4px 0 11px red;
+    content: ""; }
+  100% {
+    transform: none;
+    position: absolute;
+    top: -13px;
+    left: -33px;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 61px 0 0 white, 4px -1px 0 9px red, -2px  4px 0 11px red, 58px -1px 0 9px red, 64px  4px 0 11px red;
+    content: ""; } }
