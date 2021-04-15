@@ -6,9 +6,7 @@ body {
   min-height: 100vh;
   font-size: 1.25rem;
   display: grid;
-  place-items: center; }
-
-body {
+  place-items: center;
   background-color: #f2f2f2;
   animation-name: bg-change;
   animation-duration: 0.1s;
@@ -16,7 +14,7 @@ body {
   animation-fill-mode: forwards; }
 
 main {
-  width: 500px;
+  width: 600px;
   display: flex;
   justify-content: space-evenly; }
 
@@ -233,19 +231,19 @@ main .item--3::after {
   50% {
     width: 30px;
     height: 30px;
-    border: 32px solid red;
-    border-top: 40px solid transparent;
-    border-bottom: 22px solid red;
+    border: 32px solid #f2f2f2;
+    border-top: 55px solid transparent;
+    border-bottom: 22px solid #f2f2f2;
     border-radius: 30px 30px 15px 15px;
-    box-shadow: 15px 45px 0 11px red; }
+    box-shadow: 15px 45px 0 11px #f2f2f2; }
   100% {
     width: 30px;
     height: 30px;
-    border: 32px solid red;
-    border-top: 40px solid transparent;
-    border-bottom: 22px solid red;
+    border: 32px solid #f2f2f2;
+    border-top: 55px solid transparent;
+    border-bottom: 22px solid #f2f2f2;
     border-radius: 30px 30px 15px 15px;
-    box-shadow: 15px 45px 0 11px red; } }
+    box-shadow: 15px 45px 0 11px #f2f2f2; } }
 
 @keyframes turn-into-skull-before {
   0% {
@@ -264,24 +262,24 @@ main .item--3::after {
     left: -51px;
     width: 0;
     height: 0;
-    border: 66px solid red;
+    border: 66px solid #f2f2f2;
     border-bottom: 66px solid transparent;
     border-radius: 66px;
     content: "";
     transform: none;
-    background-color: red; }
+    background-color: #f2f2f2; }
   100% {
     position: absolute;
     top: -60px;
     left: -51px;
     width: 0;
     height: 0;
-    border: 66px solid red;
+    border: 66px solid #f2f2f2;
     border-bottom: 66px solid transparent;
     border-radius: 66px;
     content: "";
     transform: none;
-    background-color: red; } }
+    background-color: #f2f2f2; } }
 
 @keyframes turn-into-skull-after {
   0% {
@@ -295,10 +293,10 @@ main .item--3::after {
     top: -13px;
     left: -33px;
     width: 35px;
-    height: 35px;
-    background: white;
+    height: 15px;
+    background: #0d0d0d;
     border-radius: 20px;
-    box-shadow: 61px 0 0 white, 4px -1px 0 9px red, -2px  4px 0 11px red, 58px -1px 0 9px red, 64px  4px 0 11px red;
+    box-shadow: 61px 0 0 #0d0d0d;
     content: ""; }
   100% {
     transform: none;
@@ -307,7 +305,7 @@ main .item--3::after {
     left: -33px;
     width: 35px;
     height: 35px;
-    background: white;
+    background: #0d0d0d;
     border-radius: 20px;
-    box-shadow: 61px 0 0 white, 4px -1px 0 9px red, -2px  4px 0 11px red, 58px -1px 0 9px red, 64px  4px 0 11px red;
+    box-shadow: 61px 0 0 #0d0d0d;
     content: ""; } }

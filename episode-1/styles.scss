@@ -1,8 +1,13 @@
-@import '../utilities/mixins';
-
-@include setup;
+* {
+    box-sizing: border-box; // Include padding and border in the element's total width and height
+}
 
 body {
+    margin: 0;
+    min-height: 100vh;
+    font-size: 1.25rem;
+    display: grid;
+    place-items: center;
     background-color: hsl(0, 0, 95);
     animation-name: bg-change;
     animation-duration: 0.1s;
@@ -11,7 +16,7 @@ body {
 }
 
 main {
-    width: 500px;
+    width: 600px;
     display: flex;
     justify-content: space-evenly;
 
@@ -259,20 +264,20 @@ main {
     50% {
         width: 30px;
         height: 30px;
-        border: 32px solid red;
-        border-top: 40px solid transparent;
-        border-bottom: 22px solid red;
+        border: 32px solid hsl(0, 0, 95);
+        border-top: 55px solid transparent;
+        border-bottom: 22px solid hsl(0, 0, 95);
         border-radius: 30px 30px 15px 15px;
-        box-shadow: 15px 45px 0 11px red;
+        box-shadow: 15px 45px 0 11px hsl(0, 0, 95);
     }
     100% {
         width: 30px;
         height: 30px;
-        border: 32px solid red;
-        border-top: 40px solid transparent;
-        border-bottom: 22px solid red;
+        border: 32px solid hsl(0, 0, 95);
+        border-top: 55px solid transparent;
+        border-bottom: 22px solid hsl(0, 0, 95);
         border-radius: 30px 30px 15px 15px;
-        box-shadow: 15px 45px 0 11px red;
+        box-shadow: 15px 45px 0 11px hsl(0, 0, 95);
     }
 }
 
@@ -294,12 +299,12 @@ main {
         left: -51px;
         width: 0;
         height: 0;
-        border: 66px solid red;
+        border: 66px solid hsl(0, 0, 95);
         border-bottom: 66px solid transparent;
         border-radius: 66px;
         content: "";
         transform: none;
-        background-color: red;
+        background-color: hsl(0, 0, 95);
     }
     100% {
         position: absolute;
@@ -307,12 +312,12 @@ main {
         left: -51px;
         width: 0;
         height: 0;
-        border: 66px solid red;
+        border: 66px solid hsl(0, 0, 95);
         border-bottom: 66px solid transparent;
         border-radius: 66px;
         content: "";
         transform: none;
-        background-color: red;
+        background-color: hsl(0, 0, 95);
     }
 }
 
@@ -329,14 +334,10 @@ main {
         top: -13px;
         left: -33px;
         width: 35px;
-        height: 35px;
-        background: white;
+        height: 15px;
+        background: hsl(0, 0, 5);
         border-radius: 20px;
-        box-shadow: 61px 0 0 white,
-                    4px -1px 0 9px red,
-                    -2px  4px 0 11px red,
-                    58px -1px 0 9px red,
-                    64px  4px 0 11px red;
+        box-shadow: 61px 0 0 hsl(0, 0, 5);
         content: "";
     }
     100% {
@@ -346,13 +347,9 @@ main {
         left: -33px;
         width: 35px;
         height: 35px;
-        background: white;
+        background: hsl(0, 0, 5);
         border-radius: 20px;
-        box-shadow: 61px 0 0 white,
-                    4px -1px 0 9px red,
-                    -2px  4px 0 11px red,
-                    58px -1px 0 9px red,
-                    64px  4px 0 11px red;
+        box-shadow: 61px 0 0 hsl(0, 0, 5);
         content: "";
     }
 }
